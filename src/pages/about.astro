@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About">
+	<div class="mx-auto flex max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
+		<img
+			src="/headshot.jpeg"
+			alt="Headshot"
+			class="h-48 w-48 rounded-full object-cover bg-stone-200 ring-4 ring-amber-100"
+		/>
+		<div class="text-left">
+			<h1 class="text-2xl font-semibold text-center text-stone-900">About Me</h1>
+			<p class="mt-4 text-stone-600">
+                I'm a software engineer based in Austin, TX, with a B.A. in Computer Science from Rice University.
+                I worked as a Software Developer II at Paycom for a year, where I owned full-stack features end-to-end, like designing tools that cut manual workflows by up to 70%, and migrating legacy database systems for better performance.
+                My background goes beyond enterprise software too. I've taught students GNC principles, contributed to LLM evaluation frameworks, and shipped a multiplayer game.
+                I enjoy work that mixes ownership with variety, and I'm always looking to learn new tools and domains along the way.
+                Right now I'm looking for full-time opportunities, remote or based in Austin, TX, though I'm open to relocating for the right role.
+			</p>
+			<a
+				href="/resume.pdf"
+				download
+				class="mt-6 block w-fit mx-auto rounded-xl bg-amber-600 px-5 py-2 text-white hover:bg-amber-700"
+			>
+				Download Resume
+			</a>
+		</div>
+	</div>
+</Layout>

@@ -1,0 +1,35 @@
+---
+const links = [
+	{ href: "/", label: "Home" },
+	{ href: "/about", label: "About" },
+	{ href: "/contact", label: "Contact" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="bg-stone-900 text-stone-100">
+	<div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-y-2 px-4 py-4 sm:px-6">
+		<a href="/" class="text-base font-semibold sm:text-lg">My Portfolio</a>
+		<ul class="flex gap-4 sm:gap-6">
+			{
+				links.map((link) => {
+					const isActive =
+						link.href === "/"
+							? currentPath === "/"
+							: currentPath.startsWith(link.href);
+					return (
+						<li>
+							<a
+								href={link.href}
+								class={`hover:text-amber-400 ${isActive ? "font-medium text-amber-400" : "text-stone-400"}`}
+							>
+								{link.label}
+							</a>
+						</li>
+					);
+				})
+			}
+		</ul>
+	</div>
+</nav>

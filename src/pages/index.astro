@@ -1,17 +1,26 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Steven Luu">
+	<div class="mx-auto flex max-w-2xl flex-col items-center gap-4 px-6 py-24 text-center">
+		<h1 class="text-3xl font-semibold text-stone-900">Steven Luu</h1>
+		<p class="text-lg text-stone-600">
+			Software Engineer building full-stack tools and games.
+		</p>
+		<div class="mt-4 flex gap-4">
+			<a
+				href="/about"
+				class="rounded-xl bg-amber-600 px-5 py-2 text-white hover:bg-amber-700"
+			>
+				About Me
+			</a>
+			<a
+				href="/contact"
+				class="rounded-xl border border-stone-300 px-5 py-2 text-stone-800 hover:bg-stone-100"
+			>
+				Get In Touch
+			</a>
+		</div>
+	</div>
+</Layout>
